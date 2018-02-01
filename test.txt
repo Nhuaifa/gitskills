@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 dbbsjdbajbdcbsa
 
 njsnvc
 
+=======
+ldls;lds
+sl;ld
+>>>>>>> 01d0aa75207e6548130f61f26c4632e27ded0994
