@@ -88,15 +88,20 @@ target.addEventListener('touch', function(e){
 为了避免passive event listeners写法在老旧浏览器中引起的事件捕获时机的问题，以及老式addEventListener写法在新浏览器中无法阻止滑动事件的问题，我们通常使用以下方式来实现一种兼容的方法，使得addEventListener方法在新老浏览器中都能够较好的执行：
 
 // 表示当前环境是否支持passive event listeners的变量
+
 var passiveSupported = false;
+
 try {
+    
     // 设置对象属性的get方法，get方法内将passiveSupported赋值为true
   var options = Object.defineProperty({}, "passive", {
     get: function() {
       passiveSupported = true;
     }
   });
+
 // 调用addEventListener
+
 window.addEventListener("test", null, options);
 } catch(err) {}
 
