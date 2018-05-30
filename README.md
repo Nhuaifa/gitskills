@@ -28,6 +28,7 @@ preventDefault()——阻止事件的默认行为
 target.addEventListener('touchmove',function(e){
 	e.preventDefault()
 })
+
 在添加touch事件处理函数listener时，浏览器并不知道listener内部到底有没有调用preventDefault()方法阻止滑动行为，所以浏览器会首先执行listener函数，等listener执行完成之后，如果listener中调用了preventDefault()则页面保持停止不动，如果没有调用，则立马进行滚动行为，所以在listener函数执行期间页面无论如何是不会滚动的。
 
 即如果listener函数执行耗费了200ms，而listener函数内部又没有调用preventDefault()方法，页面会停滞200ms然后滑动，这就造成了页面滑动卡顿。
