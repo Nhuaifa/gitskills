@@ -8,6 +8,9 @@ addEventListener()
 removeEventListener()
 这两个方法用于对添加和删除DOM事件的处理函数。
 
+```
+```
+
 在这之后的很长一段时间内addEventListener()的基本语法为：
 
 target.addEventListener(type, listener[, useCapture]);
@@ -92,7 +95,6 @@ target.addEventListener('touch', function(e){
 var passiveSupported = false;
 
 try {
-    
     // 设置对象属性的get方法，get方法内将passiveSupported赋值为true
   var options = Object.defineProperty({}, "passive", {
     get: function() {
